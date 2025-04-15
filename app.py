@@ -8,5 +8,5 @@ with open("model.pkl", "rb") as file:
 
 user_input = st.number_input("Experience Years", min_value=0.0, max_value=50.0, value=0.0, step=0.1)
 
-if st.button:
+if st.button("Predict Salary"):
     st.success(model.predict( [[user_input]])[0] )
